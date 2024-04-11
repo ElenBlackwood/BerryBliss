@@ -1,0 +1,105 @@
+@import '../../mixin';
+.login {
+    width: 100%;
+    height: 95vh;
+    padding-top: 100px;
+
+    &__container {
+        width: 580px;
+        background-color: #181616;
+        margin: auto;
+        padding: 25px 60px;
+        border-radius: 10px;      
+        @include breakpoint ('sm') {
+            width: 450px;
+        }  
+
+        @include breakpoint ('xs') {
+            width: 355px;
+            padding: 20px;
+        }  
+
+        @include breakpoint ('xxs') {
+            width: 300px;
+            padding: 10px;
+        }  
+    }
+
+    &__title {
+        margin: 20px 0;
+        text-align: center;            
+        font-size: 38px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+
+        @include breakpoint ('sm') {
+            font-size: 30px;
+        }
+
+        @include breakpoint ('xxs') {
+            font-size: 23px;
+        } 
+    }
+
+    &__login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+
+        input {
+            height: 55px;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #fff;
+            outline: none;
+            color: #181616;
+            font-size: 18px;
+            border-radius: 20px;
+
+            @include breakpoint ('sm') {
+                font-size: 15px;
+            }  
+
+            @include breakpoint ('xs') {
+                padding: 10px;                
+            }  
+
+            @include breakpoint ('xxs') {
+                font-size: 13px;
+            }
+        }       
+    }
+
+    &__signin {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        span {
+            color: #8e1d1d;
+            font-weight: 600;        
+        }
+
+        @include breakpoint ('sm') {
+            font-size: 13px;
+        } 
+    }
+
+        &__chebox-form {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #8d5d5d;
+            font-size: 18px;
+            font-weight: 500;
+            @include breakpoint ('sm') {
+                font-size: 13px;
+            }
+            @include breakpoint ('xxs') {
+                font-size: 10px;
+            }
+        }
+}

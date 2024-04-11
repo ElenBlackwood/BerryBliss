@@ -1,0 +1,41 @@
+// responsive mixin
+$grid-breakpoints: (
+        xxs: 360px,
+        xs: 568px,
+        sm: 640px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1200px,
+        xxl: 1440px,
+        xxxl: 1920px
+);
+
+@mixin breakpoint($size, $rule: max-width) {
+  @media (#{$rule}: map-get($grid-breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mf($size, $rule: min-width) {
+  @media (#{$rule}: map-get($grid-breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min-size, $max-size) {
+  $min: map-get($grid-breakpoints, $min-size);
+  $max: map-get($grid-breakpoints, $max-size) - 1px;
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// mixin for CAPSLOCK text 
+@mixin capslock-text {
+  font-family: karla,sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

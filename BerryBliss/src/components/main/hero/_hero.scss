@@ -1,0 +1,47 @@
+@import '../../../mixin';
+
+.hero {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include breakpoint ('lg') {
+        top: 30%;
+    }
+
+    @include breakpoint ('md') {
+        top: 20%;
+    }
+
+    @include breakpoint('xxs') {
+        top: 10%;
+    }
+
+    &__title-holder{
+        width: 55%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        text-shadow: red 1px 0 10px;
+
+        @include breakpoint ('lg') {
+            font-size: 40px;
+        }
+
+        @include breakpoint ('md') {
+            font-size: 35px;
+        }
+
+        @include breakpoint('sm') {
+            font-size: 25px;
+        }
+
+    }
+}

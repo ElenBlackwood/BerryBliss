@@ -1,0 +1,50 @@
+@import '../../mixin';
+
+.location {
+    padding: 100px 30px 10px;
+    background-color: #181616;
+    margin-bottom: 60px;
+
+    .container.flex-container {
+        @include breakpoint ('md') {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 25px;
+
+        &__item {
+            display: flex;
+            gap: 15px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__item-text p {
+            line-height: 1.5;
+        }
+
+        @include breakpoint ('md') {
+            font-size: 13px;
+        }
+
+        
+    }
+
+    .maps {
+        height: 50vh;
+        width: 50%;
+
+        @include breakpoint ('md') {
+            width: 100%;
+        }
+    }
+}

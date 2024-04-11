@@ -1,0 +1,192 @@
+@import '../../mixin.scss';
+.header {  
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;   
+
+    .is-open-container {
+        @include breakpoint('lg') {
+            padding: 30px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center !important;
+            align-items: center;
+            z-index: 11;
+            position: absolute;
+            width: 100%;
+            background-color: #000;
+            gap: 20px;
+            transition: ease-in-out 0.5s; 
+            height: 100vh;
+        }
+
+        .burger {
+            &__line {
+                display: none;
+            }
+            &::before {
+                top: 5px;
+
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            &::after {
+                top: 5px;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    &_logo {
+        margin-left: 25px;     
+        
+        @include breakpoint ('xxs') {
+            margin-left: 0;
+        }
+    }
+
+    .burger {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 70px;
+        height: 30px;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;       
+         
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #fff;            
+            transition: all ease-in-out 0.5s;
+
+            @include breakpoint ('xxs') {
+                width: 30px;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #fff;
+            transition: all ease-in-out 0.5s;
+            @include breakpoint ('xxs') {
+                width: 30px;
+            }
+        }
+
+        &__line {
+            width: 40px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 23%;
+            -webkit-transform: translate(-50% -50%);
+            transform: translate(-50% -50%);
+            background-color: #fff;
+            -webkit-transition: all ease-in-out 0.5s;
+            transition: all ease-in-out 0.5s;
+        }
+
+        @include breakpoint ('lg') {
+            display: block;
+        }
+
+        
+    } 
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -5px;
+        text-transform: uppercase;     
+        transition: ease-in-out 0.3s;
+
+        hr {
+            margin-top: 5px ;
+            border: none;
+            width: 80%;
+            height: 3px;
+            border-radius: 10px;
+            background-color: #E5CBA0;
+            }
+
+        &__menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            @include breakpoint ('lg') {
+                display: none;
+            }
+        }
+
+        &__menu.is-open {
+            @include breakpoint ('lg') {
+                background-color: #000;
+                display: flex;
+                flex-direction:column;
+                column-gap: 20px;
+
+            }
+
+       
+
+            & a {
+                @include breakpoint ('md') {
+                    display: block;
+                    width: 100%;
+                }
+            }     
+            
+            
+        }        
+
+        &__cart-count {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -20px;
+            margin-left: -30px;
+            border-radius: 11px;
+            font-size: 14px;
+            background-color: #E5CBA0;
+            color: #000;
+        }
+
+        &__is-open-cart {
+            @include breakpoint('lg')  {
+                margin-top: -56px;
+                margin-left: 29px;
+                margin-bottom: 20px;
+            }
+        }    
+    }
+}
+
+

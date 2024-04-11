@@ -1,0 +1,72 @@
+@import '../../../mixin';
+.trending {
+    padding: 5px 15px 10px ;
+    margin-bottom: 100px;
+
+    &__blocks-holder {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+
+        @include breakpoint ('md') {
+            flex-direction: column;
+            align-items: center;           
+        }
+    }
+
+    &__promo-text {
+        font-family: "Josefin Sans", sans-serif;
+        margin-bottom: 30px;
+        display: block;
+        width: 35%;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.5;
+
+        @include breakpoint ('xl') {
+            width: 50%;
+            font-size: 20px;
+        }
+
+        @include breakpoint ('xxs') {
+            width: 70%;
+            font-size: 13px;
+        }          
+    }
+
+    &__img-holder {
+        margin-bottom: 35px;
+
+        img {
+            height: 575px;
+            display: block;
+            margin: 0 auto;
+
+            @include breakpoint ('xxs') {
+                height: 50%;
+            }
+        }
+    }
+
+    &__desc-box {
+        letter-spacing: 1px;
+        line-height: 1.5;
+        width: 80%;        
+        margin: 0 auto;  
+
+        &_flex {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 230px;
+
+            @include breakpoint ('md') {
+                gap: 30px;
+            }
+        }        
+
+        @include breakpoint ('xxs') {
+            width: 100%;
+        }text-align: center;
+    }   
+}

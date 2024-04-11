@@ -1,0 +1,103 @@
+@import '../../../mixin';
+
+.newsletter {
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0 140px;
+    margin-bottom: 150px;
+    gap: 30px;
+
+    @include breakpoint ('sm') {
+        margin-bottom: 100px;
+        gap: 10px;     
+        padding: 0;        
+    }
+
+    &__subtitle {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #fff;
+
+        @include breakpoint ('md') {
+            text-align: center;
+        }
+
+        @include breakpoint ('xxs') {
+            font-size: 15px;               
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        width: 730px;
+        height: 70px;
+        border-radius: 80px;
+        border: 1px solid #000;
+
+        @include breakpoint ('md') {
+            width: 550px;
+        }
+
+        @include breakpoint ('sm') {
+            width: 400px;
+        }
+
+        @include breakpoint ('xs') {
+            width: 280px;
+            height: 50px;
+            // flex-direction: column;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 500px;
+        margin-left: 30px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+
+        @include breakpoint ('xs') {
+            width: 400px;
+            font-size: 13px;
+        }
+    }
+
+    &__btn {
+        width: 210px;
+        height: 70px;
+        border-radius: 80px;
+        background-color: #8e1d1d;;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+        color: #fff !important;
+        background-color: #181616;
+        border: 1px solid #fff;
+        }
+
+        &:active {
+            background-color: #8e1d1d;
+        }
+
+        @include breakpoint('md') {
+            font-size: 12px;
+        }
+
+        @include breakpoint ('xs') {
+            width: 400px;
+            height: 50px;
+        }        
+    }    
+}

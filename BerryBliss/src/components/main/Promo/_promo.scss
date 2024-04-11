@@ -1,0 +1,20 @@
+@import '../../../mixin';
+
+.promo {
+    background-color: black;
+    margin-bottom: 100px;
+
+
+    &__bg {
+        background-image: url(../../assets/grape-bg-min.jpg);
+        min-height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @include breakpoint ('xxs') {
+            min-height: 200px;            
+        }
+    }
+}

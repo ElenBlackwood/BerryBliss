@@ -1,0 +1,74 @@
+@import '../../mixin';
+
+.about {
+    padding-top: 100px;
+    background-color: black;
+    margin-bottom: 150px;
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 40px;
+        text-align: left;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-image: url('../../components/assets/grapes.svg');
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        @include breakpoint ('lg') {
+            font-size: 30px;   
+            margin-left: 25px;
+        }
+
+        @include breakpoint ('xs') {
+            font-size: 20px;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 50px;
+        
+        &_rev {
+            flex-direction: row-reverse;
+            padding-top: 80px;
+        }
+
+        @include breakpoint ('lg') {
+            row-gap: 15px;          
+        }
+
+        @include breakpoint ('md') {
+            flex-direction: column;
+        }
+    }
+
+    &__text-holder {
+        width: 45%;
+
+        @include breakpoint ('lg') {
+            width: 70%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;        
+        font-size: 17px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+
+        @include breakpoint ('xs') {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}

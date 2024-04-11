@@ -1,0 +1,56 @@
+@import '../../mixin';
+
+.catalog {
+    padding-top: 100px;
+    margin-bottom: 150px;
+
+    .title {
+        @include breakpoint ('xl') {
+            text-align: left;         
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 1px;
+            bottom: 50%;
+            right: 0;
+            background: #8E1D1D;        
+
+            @include breakpoint ('xl') {             
+                width: 70%;    
+            }
+
+            @include breakpoint ('lg') {             
+                width: 65%;    
+            }
+
+            @include breakpoint ('md') {             
+                width: 50%;    
+            }
+
+            @include breakpoint ('xs') {             
+                display: none; 
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 45px;
+        margin-bottom: 40px;
+    }
+
+    &__btn-holder {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint ('xs') {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
