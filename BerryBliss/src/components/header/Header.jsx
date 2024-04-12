@@ -11,9 +11,11 @@ const Header = ({ cartCount }) => {
     const toggleMenu = () => {
         setIsOpen((open) => !open)
     }   
-
+    const closeMenu = () => {
+        setIsOpen(false);
+    }
+    
     useEffect(() => {
-        // Add or remove 'overflow-hidden' class on body based on isOpen state
         if (isOpen) {
             document.body.classList.add('overflow-hidden');
         } else {
@@ -25,18 +27,18 @@ const Header = ({ cartCount }) => {
         <header className="header">
             <div  className={`container flex-container ${isOpen ? `is-open-container` : ""}`}>
                 <div className="logo header_logo">
-                    <Link to='./'>BERRYBLISS</Link>
+                    <Link  onClick={closeMenu} to='./'>BERRYBLISS</Link>
                 </div>
                 <nav className="nav">
                     <ul className={`nav__menu ${isOpen ? `is-open` : ""}`}>
-                        <li onClick={() => {setMenu("catalog")}}><Link to='./catalog'>Catalog</Link>{menu === "catalog" ? <hr/> : <></>}</li>
-                        <li onClick={() => {setMenu("about")}}><Link to='./about'>About</Link> {menu === "about" ? <hr/> : <></>}</li>
-                        <li onClick={() => {setMenu("blog")}}><Link to='./blog'>Blog</Link> {menu === "blog" ? <hr/> : <></>}</li>
-                        <li onClick={() => {setMenu("location")}}><Link to='./location'>Where to buy</Link>{menu === "location"?<hr/> : <></>}</li>
-                        <li><Link to="./cart"><img src={cartIcon} alt="Cart" /></Link></li>
+                        <li onClick={() => {setMenu("catalog")}}><Link onClick={closeMenu} to='./catalog'>Catalog</Link>{menu === "catalog" ? <hr/> : <></>}</li>
+                        <li onClick={() => {setMenu("about")}}><Link onClick={closeMenu} to='./about'>About</Link> {menu === "about" ? <hr/> : <></>}</li>
+                        <li onClick={() => {setMenu("blog")}}><Link onClick={closeMenu} to='./blog'>Blog</Link> {menu === "blog" ? <hr/> : <></>}</li>
+                        <li onClick={() => {setMenu("location")}}><Link onClick={closeMenu} to='./location'>Where to buy</Link>{menu === "location"?<hr/> : <></>}</li>
+                        <li><Link onClick={closeMenu} to="./cart"><img src={cartIcon} alt="Cart" /></Link></li>
                         <div className={`nav__cart-count ${isOpen ? `nav__is-open-cart` : ""}`}>{cartCount}</div>
-                        <li><Link to="./favourites"><img src={likeIcon} alt="favourites" /></Link></li>
-                        <li><Link to="./login"><img src={userIcon} alt="login" /></Link></li>
+                        <li><Link onClick={closeMenu} to="./favourites"><img src={likeIcon} alt="favourites" /></Link></li>
+                        <li><Link onClick={closeMenu} to="./login"><img src={userIcon} alt="login" /></Link></li>
                     </ul>
                     <button className="burger" onClick={toggleMenu}>
                     <span className="burger__line"></span>
