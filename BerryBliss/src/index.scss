@@ -17,6 +17,7 @@ body {
   line-height: 1;
   background-color: #000;
   color: #fff; 
+  overflow-x: hidden;
 
   @include breakpoint ('xxs') {
     font-size: 13px;         
