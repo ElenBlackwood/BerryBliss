@@ -1,8 +1,11 @@
 @import '../../mixin';
 .login {
     width: 100%;
-    height: 95vh;
     padding-top: 100px;
+    margin-bottom: 150px;
+    @include breakpoint ('xs') {
+        margin-bottom: 60px;
+    }  
 
     &__container {
         width: 580px;
