@@ -1,7 +1,7 @@
 # BERRYBLISS WEBSITE https://berrybliss.netlify.app/
 
 ## Description
-Welcome to our project! This is a BERRYBLISS WEBSITE made in React.js and React Router DOM library with Vite server. Vite.js supports JSX and helps to check and make changes to the code and see the results in the browser without waiting for a full build process.
+Welcome to my project! This is a BERRYBLISS WEBSITE made in React.js and React Router DOM library with Vite server. Vite.js supports JSX and helps to check and make changes to the code and see the results in the browser without waiting for a full build process.
 API data, React hooks and components, responsive web design, and Google Maps were used for building. This project is an online store template that allows users to see the catalog and add items to the saved items or shopping cart. Users can check or link to the address on the maps and create a private profile. It also allows the website to be used on phones or tablets, with a responsive menu.
 
 ## Instructions
