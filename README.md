@@ -59,14 +59,13 @@ git clone https://github.com/ElenBlackwood/BerryBliss.git && cd ./BerryBliss && 
 
 4. **Terminal**: Open the terminal.
 
-5. **Navigate**: Navigate to the main folder in the terminal.
-   make sure you are in the right folder
+5. **Navigate**:  Navigate to the main folder in the terminal. Make sure you are in the right folder:
 
 ```shell
 cd ./BerryBliss
 ```
 
-7. **Start**: Start the project with the following command:
+6. **Start**: Start the project with the following command:
  
 ```shell
 npm run dev
